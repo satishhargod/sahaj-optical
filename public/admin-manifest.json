@@ -1,0 +1,22 @@
+{
+  "name": "Sahaj Optical",
+  "short_name": "Sahaj Optical",
+  "description": "Sahaj Optical Indore",
+  "start_url": "/admin",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#973481",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

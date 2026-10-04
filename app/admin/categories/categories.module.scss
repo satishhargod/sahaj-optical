@@ -1,0 +1,434 @@
+$navy: #0f172a;
+$blue: #2563eb;
+$green: #16a34a;
+$red: #dc2626;
+$bg: #f8fafc;
+$white: #fff;
+$border: #e2e8f0;
+$muted: #64748b;
+$radius: 14px;
+
+.container {
+  min-height: 100vh;
+  background: $bg;
+  padding: 20px;
+}
+
+// ── Variables ─────────────────────────────────────────────────────────────────
+$navy:    #0f172a;
+$blue:    #2563eb;
+$blue-l:  #dbeafe;
+$green:   #16a34a;
+$red:     #dc2626;
+$muted:   #64748b;
+$border:  #e2e8f0;
+$bg:      #f8fafc;
+$white:   #ffffff;
+$radius:  12px;
+$font:    'Outfit', sans-serif;
+
+// ── Header ────────────────────────────────────────────────────────────────────
+.header {
+  background: $white;
+  border-bottom: 1px solid $border;
+  padding: 16px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+
+  @media (max-width: 640px) {
+    padding: 12px;
+  }
+}
+
+// ── Left ──────────────────────────────────────────────────────────────────────
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.back {
+  width: 38px;
+  height: 38px;
+
+  background: $navy;
+  color: $white;
+
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+
+  transition: 0.15s;
+
+  &:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+  }
+}
+
+.title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: $navy;
+}
+
+.subtitle {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: $muted;
+}
+
+// ── Right ─────────────────────────────────────────────────────────────────────
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  @media (max-width: 640px) {
+    width: 100%;
+  }
+}
+
+// ── Search ────────────────────────────────────────────────────────────────────
+.searchBox {
+  position: relative;
+
+  .searchIcon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    color: $muted;
+    font-size: 13px;
+  }
+
+  input {
+    width: 240px;
+    height: 42px;
+
+    border: 1.5px solid $border;
+    border-radius: 10px;
+
+    padding: 0 14px 0 36px;
+
+    font-size: 14px;
+    font-family: $font;
+
+    outline: none;
+
+    transition: 0.18s;
+
+    &:focus {
+      border-color: $blue;
+      box-shadow: 0 0 0 4px rgba(37,99,235,.08);
+    }
+
+    @media (max-width: 640px) {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 640px) {
+    flex: 1;
+    width: 100%;
+  }
+}
+
+// ── Add Button ────────────────────────────────────────────────────────────────
+.newBtn {
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 0 18px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: $blue;
+  color: $white;
+
+  font-size: 14px;
+  font-weight: 600;
+  font-family: $font;
+
+  cursor: pointer;
+
+  transition: 0.15s;
+
+  white-space: nowrap;
+
+  &:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: scale(.98);
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  input {
+    height: 42px;
+    border: 1px solid $border;
+    border-radius: 10px;
+    padding: 0 14px;
+    min-width: 220px;
+    outline: none;
+
+    &:focus {
+      border-color: $blue;
+    }
+  }
+
+  button {
+    height: 42px;
+    border: none;
+    background: $blue;
+    color: white;
+    padding: 0 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
+  gap: 16px;
+}
+
+.card {
+  background: $white;
+  border-radius: $radius;
+  border: 1px solid $border;
+  overflow: hidden;
+}
+
+.cardTop {
+  background: $navy;
+  color: white;
+  padding: 12px 14px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topActions {
+  display: flex;
+  gap: 8px;
+
+  button {
+    border: none;
+    background: rgba(255,255,255,.12);
+    color: white;
+    height: 30px;
+    padding: 0 12px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+}
+
+.deleteBtn {
+  background: rgba(220,38,38,.25) !important;
+}
+
+.cardBody {
+  padding: 16px;
+  display: flex;
+  gap: 14px;
+}
+
+.imageWrap {
+  width: 72px;
+  height: 72px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f1f5f9;
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.noImage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: $muted;
+}
+
+.content {
+  flex: 1;
+
+  h3 {
+    margin: 0 0 10px;
+    color: $navy;
+    font-size: 18px;
+  }
+}
+
+.active,
+.inactive {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  padding: 0 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.active {
+  background: rgba(22,163,74,.12);
+  color: $green;
+}
+
+.inactive {
+  background: rgba(220,38,38,.12);
+  color: $red;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 1000;
+}
+
+.modal {
+  width: 100%;
+  max-width: 500px;
+  background: $white;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.modalHeader {
+  background: $navy;
+  color: white;
+  padding: 16px 18px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    border: none;
+    background: rgba(255,255,255,.1);
+    color: white;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+}
+
+.modalBody {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label {
+    font-size: 13px;
+    font-weight: 600;
+    color: $muted;
+  }
+
+  input,
+  select {
+    height: 44px;
+    border: 1px solid $border;
+    border-radius: 10px;
+    padding: 0 14px;
+    outline: none;
+
+    &:focus {
+      border-color: $blue;
+    }
+  }
+}
+
+.modalFooter {
+  padding: 16px 18px;
+  border-top: 1px solid $border;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.cancelBtn {
+  height: 42px;
+  padding: 0 18px;
+  border-radius: 10px;
+  border: 1px solid $border;
+  background: white;
+  cursor: pointer;
+}
+
+.saveBtn {
+  height: 42px;
+  padding: 0 18px;
+  border-radius: 10px;
+  border: none;
+  background: $blue;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.empty {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid $border;
+  padding: 70px 20px;
+  text-align: center;
+  color: $muted;
+}
